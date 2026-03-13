@@ -1,0 +1,84 @@
+{
+  "project": "Quantum-AI Digital Twin \u2014 Indian Smart Grid",
+  "date": "2026-03-13T15:31:04.241847",
+  "ai": {
+    "BiLSTM_Attention": {
+      "name": "BiLSTM+Attention",
+      "MAE": 3.4427,
+      "RMSE": 4.311,
+      "MAPE": 1.902500033378601,
+      "R2": 0.9227
+    },
+    "TF_Transformer": {
+      "name": "TF-Transformer",
+      "MAE": 3.2439,
+      "RMSE": 4.0991,
+      "MAPE": 1.7910000085830688,
+      "R2": 0.9302
+    },
+    "Ensemble": {
+      "name": "Ensemble",
+      "MAE": 3.317,
+      "RMSE": 4.1722,
+      "MAPE": 1.8317999839782715,
+      "R2": 0.9276
+    }
+  },
+  "optim": {
+    "baseline": {
+      "Method": "\ud83d\udd34 Baseline",
+      "peak": 207872.0625,
+      "cost": 4224.75,
+      "carbon_avg": 819.77294921875,
+      "renew_pct": 0.03,
+      "overload": 24.0,
+      "peak_red%": 0.0,
+      "cost_sav%": 0.0,
+      "co2_sav%": 0.0
+    },
+    "classical": {
+      "Method": "\ud83d\udd35 Classical",
+      "peak": 207872.0625,
+      "cost": 6159.9,
+      "carbon_avg": 819.7730102539062,
+      "renew_pct": 0.03,
+      "overload": 24.0,
+      "peak_red%": 0.0,
+      "cost_sav%": -45.81,
+      "co2_sav%": -0.0
+    },
+    "hybrid": {
+      "Method": "\ud83d\udfe2 Hybrid Quantum-AI",
+      "peak": 207872.0625,
+      "cost": 6159.9,
+      "carbon_avg": 819.7730102539062,
+      "renew_pct": 0.03,
+      "overload": 24.0,
+      "peak_red%": 0.0,
+      "cost_sav%": -45.81,
+      "co2_sav%": -0.0
+    }
+  },
+  "qaoa": {
+    "objective": -11.406696693297118,
+    "active_slots": 12
+  },
+  "config": {
+    "GH_REPO": "quantum-ai-smart-grid-india",
+    "HF_MODEL": "quantum-ai-smart-grid-india",
+    "HF_DATA": "quantum-ai-smart-grid-india-datasets",
+    "HF_SPACE": "quantum-ai-smart-grid-india-demo",
+    "DAYS": 90,
+    "N_EVS": 12,
+    "T_SLOTS": 24,
+    "MAX_EV_KW": 7.4,
+    "GRID_CAP": 200.0,
+    "SEQ": 24,
+    "EPOCHS": 25,
+    "BS": 128,
+    "LR": 0.003,
+    "Q_EVS": 4,
+    "Q_SLOTS": 6,
+    "SEED": 42
+  }
+}
