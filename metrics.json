@@ -1,62 +1,62 @@
 {
   "project": "Quantum-AI Digital Twin \u2014 Indian Smart Grid",
-  "date": "2026-03-13T15:31:04.241847",
+  "date": "2026-03-13T15:53:23.495719",
   "ai": {
     "BiLSTM_Attention": {
       "name": "BiLSTM+Attention",
-      "MAE": 3.4427,
-      "RMSE": 4.311,
-      "MAPE": 1.902500033378601,
-      "R2": 0.9227
+      "MAE": 3.7536,
+      "RMSE": 4.7612,
+      "MAPE": 2.3286,
+      "R2": 0.9195
     },
     "TF_Transformer": {
       "name": "TF-Transformer",
-      "MAE": 3.2439,
-      "RMSE": 4.0991,
-      "MAPE": 1.7910000085830688,
-      "R2": 0.9302
+      "MAE": 3.4121,
+      "RMSE": 4.3241,
+      "MAPE": 2.1335,
+      "R2": 0.9336
     },
     "Ensemble": {
       "name": "Ensemble",
-      "MAE": 3.317,
-      "RMSE": 4.1722,
-      "MAPE": 1.8317999839782715,
-      "R2": 0.9276
+      "MAE": 3.5071,
+      "RMSE": 4.4494,
+      "MAPE": 2.1844,
+      "R2": 0.9297
     }
   },
   "optim": {
     "baseline": {
       "Method": "\ud83d\udd34 Baseline",
-      "peak": 207872.0625,
-      "cost": 4224.75,
-      "carbon_avg": 819.77294921875,
-      "renew_pct": 0.03,
-      "overload": 24.0,
+      "peak": 531.9502012252808,
+      "cost": 7451.8,
+      "carbon_avg": 695.9749140094737,
+      "renew_pct": 15.54,
+      "overload": 4,
       "peak_red%": 0.0,
       "cost_sav%": 0.0,
       "co2_sav%": 0.0
     },
     "classical": {
       "Method": "\ud83d\udd35 Classical",
-      "peak": 207872.0625,
-      "cost": 6159.9,
-      "carbon_avg": 819.7730102539062,
-      "renew_pct": 0.03,
-      "overload": 24.0,
-      "peak_red%": 0.0,
-      "cost_sav%": -45.81,
-      "co2_sav%": -0.0
+      "peak": 441.3452991485596,
+      "cost": 7517.1,
+      "carbon_avg": 746.0360698994369,
+      "renew_pct": 9.27,
+      "overload": 1,
+      "peak_red%": 17.03,
+      "cost_sav%": -0.88,
+      "co2_sav%": -7.19
     },
     "hybrid": {
       "Method": "\ud83d\udfe2 Hybrid Quantum-AI",
-      "peak": 207872.0625,
-      "cost": 6159.9,
-      "carbon_avg": 819.7730102539062,
-      "renew_pct": 0.03,
-      "overload": 24.0,
-      "peak_red%": 0.0,
-      "cost_sav%": -45.81,
-      "co2_sav%": -0.0
+      "peak": 441.3452991485596,
+      "cost": 7517.1,
+      "carbon_avg": 746.0360698994369,
+      "renew_pct": 9.27,
+      "overload": 1,
+      "peak_red%": 17.03,
+      "cost_sav%": -0.88,
+      "co2_sav%": -7.19
     }
   },
   "qaoa": {
@@ -68,15 +68,19 @@
     "HF_MODEL": "quantum-ai-smart-grid-india",
     "HF_DATA": "quantum-ai-smart-grid-india-datasets",
     "HF_SPACE": "quantum-ai-smart-grid-india-demo",
-    "DAYS": 90,
-    "N_EVS": 12,
+    "DAYS": 365,
+    "N_EVS": 20,
     "T_SLOTS": 24,
     "MAX_EV_KW": 7.4,
     "GRID_CAP": 200.0,
-    "SEQ": 24,
-    "EPOCHS": 25,
-    "BS": 128,
-    "LR": 0.003,
+    "SEQ": 48,
+    "EPOCHS": 50,
+    "BS": 64,
+    "LR": 0.001,
+    "LSTM_H": 128,
+    "LSTM_L": 3,
+    "TFT_DM": 64,
+    "TFT_ENC": 4,
     "Q_EVS": 4,
     "Q_SLOTS": 6,
     "SEED": 42
